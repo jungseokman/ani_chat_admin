@@ -41,14 +41,20 @@ const Login = () => {
   }, []);
 
   return (
-    <Wrapper dr="row" height="calc(100vh - 70px)">
+    <Wrapper dr="row" height="100vh">
       <Wrapper width="50%">
         <Image
           height={`100vh`}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9ZfOGmD8PA8eNW4jHUngJ-SaX5-dNgzs52g&s"
         ></Image>
       </Wrapper>
-      <Wrapper width="50%">
+      <Wrapper
+        width="50%"
+        height="100%"
+        bgImg={
+          "url(https://crepe.land/portfolio/0/00/00ylo5dj24k6nmzgdauvu9ckcp4vnm5v_IMG_8249.jpeg)"
+        }
+      >
         <WrapperStyle
           width="auto"
           bgColor={Theme.white_C}
