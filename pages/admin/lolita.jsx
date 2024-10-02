@@ -3,7 +3,7 @@ import {
   CenteredPaginationTable,
   Text,
   Wrapper,
-} from "@/components/commomComponents";
+} from "@/components/commonComponents";
 import Theme from "@/components/Theme";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Button, Select } from "antd";
@@ -100,25 +100,25 @@ const Lolita = () => {
     <AdminLayout
       content={
         <Wrapper
-          width="calc(100% - 60px)"
-          padding="25px 30px 35px 30px"
-          al="start"
+          $width="calc(100% - 60px)"
+          $padding="25px 30px 35px 30px"
+          $al="start"
         >
-          <Text fontSize="25px" fontWeight="bold">
+          <Text $fontSize="25px" $fontWeight="bold">
             미소녀 관리
           </Text>
 
           <Wrapper>
-            <Wrapper dr="row" ju="space-between">
+            <Wrapper $dr="row" $ju="space-between">
               <Wrapper
-                width="auto"
-                dr="row"
-                ju="start"
-                al="end"
-                margin="10px 0 0"
+                $width="auto"
+                $dr="row"
+                $ju="start"
+                $al="end"
+                $margin="10px 0 0"
               >
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
-                  <Text fontSize="12px">유형</Text>
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
+                  <Text $fontSize="12px">유형</Text>
                   <Select
                     value={null}
                     style={{ width: 240, margin: "5px 0 0 0" }}
@@ -144,7 +144,7 @@ const Lolita = () => {
                   />
                 </Wrapper>
 
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
                   <Button
                     type="primary"
                     style={{ width: "90px", margin: "5px 0 0" }}
@@ -153,7 +153,7 @@ const Lolita = () => {
                     검색
                   </Button>
                 </Wrapper>
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
                   <Button
                     style={{ width: "90px", margin: "5px 0 0" }}
                     onClick={null}
@@ -162,7 +162,7 @@ const Lolita = () => {
                   </Button>
                 </Wrapper>
               </Wrapper>
-              <Wrapper width="auto" al="start" margin="10px 0 0">
+              <Wrapper $width="auto" $al="start" $margin="10px 0 0">
                 <Button
                   type="primary"
                   style={{ width: "150px", margin: "5px 0 0" }}
@@ -173,14 +173,14 @@ const Lolita = () => {
               </Wrapper>
             </Wrapper>
             <Wrapper
-              height="1px"
-              bgColor={Theme.grey2_C}
-              margin="10px 0"
+              $height="1px"
+              $margin="10px 0"
+              $bgColor={Theme.grey2_C}
             ></Wrapper>
-            <Wrapper dr="row" ju="space-between">
-              <Wrapper dr="row" width="auto">
-                <Text fontWeight="bold">미소녀 리스트</Text>
-                <Text margin="0 0 0 20px" color={Theme.grey3_C}>
+            <Wrapper $dr="row" $ju="space-between">
+              <Wrapper $dr="row" $width="auto">
+                <Text $fontWeight="bold">미소녀 리스트</Text>
+                <Text $margin="0 0 0 20px" $color={Theme.grey3_C}>
                   {`${0}개`}
                 </Text>
               </Wrapper>

@@ -2,7 +2,7 @@ import { LogoutOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
 import { Menu, message } from "antd";
 import { useRouter } from "next/router";
 import { useCallback, useEffect } from "react";
-import { Text, Wrapper } from "./commomComponents";
+import { Text, Wrapper } from "./commonComponents";
 import Theme from "./Theme";
 
 function getItem(label, key, icon) {
@@ -48,16 +48,16 @@ const AdminLayout = ({ content }) => {
   return (
     <Wrapper>
       <Wrapper
-        height="33px"
-        bgColor={Theme.subTheme_C}
-        dr="row"
-        ju="space-between"
+        $height="33px"
+        $bgColor={Theme.subTheme_C}
+        $dr="row"
+        $ju="space-between"
       >
         <Text
-          color={Theme.white_C}
-          fontSize="12px"
-          fontWeight="300"
-          margin="0 0 0 20px"
+          $color={Theme.white_C}
+          $fontSize="12px"
+          $fontWeight="300"
+          $margin="0 0 0 20px"
         >
           미소녀 채팅 관리자 페이지 입니다.
         </Text>
@@ -70,7 +70,7 @@ const AdminLayout = ({ content }) => {
           }}
         />
       </Wrapper>
-      <Wrapper dr="row" ju="start" height="calc(100vh - 33px)">
+      <Wrapper $dr="row" $ju="start" $height="calc(100vh - 33px)">
         <Menu
           mode="inline"
           theme="dark"
@@ -83,10 +83,10 @@ const AdminLayout = ({ content }) => {
           }}
         />
         <Wrapper
-          width="calc(100vw - 195px)"
-          height="calc(100vh - 33px)"
-          ju="start"
-          al="start"
+          $width="calc(100vw - 195px)"
+          $height="calc(100vh - 33px)"
+          $ju="start"
+          $al="start"
         >
           {content}
         </Wrapper>

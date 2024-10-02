@@ -3,7 +3,7 @@ import {
   CenteredPaginationTable,
   Text,
   Wrapper,
-} from "@/components/commomComponents";
+} from "@/components/commonComponents";
 import Theme from "@/components/Theme";
 import useInput from "@/hooks/useInput";
 import { ExclamationCircleFilled } from "@ant-design/icons";
@@ -118,25 +118,25 @@ const User = () => {
     <AdminLayout
       content={
         <Wrapper
-          width="calc(100% - 60px)"
-          padding="25px 30px 35px 30px"
-          al="start"
+          $width="calc(100% - 60px)"
+          $padding="25px 30px 35px 30px"
+          $al="start"
         >
-          <Text fontSize="25px" fontWeight="bold">
+          <Text $fontSize="25px" $fontWeight="bold">
             회원 관리
           </Text>
 
           <Wrapper>
-            <Wrapper dr="row" ju="space-between">
+            <Wrapper $dr="row" $ju="space-between">
               <Wrapper
-                width="auto"
-                dr="row"
-                ju="start"
-                al="end"
-                margin="10px 0 0"
+                $width="auto"
+                $dr="row"
+                $ju="start"
+                $al="end"
+                $margin="10px 0 0"
               >
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
-                  <Text fontSize="12px">유형</Text>
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
+                  <Text $fontSize="12px">유형</Text>
                   <Select
                     value={null}
                     style={{ width: 240, margin: "5px 0 0 0" }}
@@ -162,7 +162,7 @@ const User = () => {
                   />
                 </Wrapper>
 
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
                   <Button
                     type="primary"
                     style={{ width: "90px", margin: "5px 0 0" }}
@@ -171,7 +171,7 @@ const User = () => {
                     검색
                   </Button>
                 </Wrapper>
-                <Wrapper width="auto" al="start" margin="0 10px 10px 0">
+                <Wrapper $width="auto" $al="start" $margin="0 10px 10px 0">
                   <Button
                     style={{ width: "90px", margin: "5px 0 0" }}
                     onClick={null}
@@ -180,7 +180,7 @@ const User = () => {
                   </Button>
                 </Wrapper>
               </Wrapper>
-              <Wrapper width="auto" al="start" margin="10px 0 0">
+              <Wrapper $width="auto" $al="start" $margin="10px 0 0">
                 <Button
                   type="primary"
                   style={{ width: "150px", margin: "5px 0 0" }}
@@ -191,14 +191,14 @@ const User = () => {
               </Wrapper>
             </Wrapper>
             <Wrapper
-              height="1px"
-              bgColor={Theme.grey2_C}
-              margin="10px 0"
+              $height="1px"
+              $margin="10px 0"
+              $bgColor={Theme.grey2_C}
             ></Wrapper>
-            <Wrapper dr="row" ju="space-between">
-              <Wrapper dr="row" width="auto">
-                <Text fontWeight="bold">회원 리스트</Text>
-                <Text margin="0 0 0 20px" color={Theme.grey3_C}>
+            <Wrapper $dr="row" $ju="space-between">
+              <Wrapper $dr="row" $width="auto">
+                <Text $fontWeight="bold">회원 리스트</Text>
+                <Text $margin="0 0 0 20px" $color={Theme.grey3_C}>
                   {`${0}개`}
                 </Text>
               </Wrapper>
@@ -222,7 +222,7 @@ const User = () => {
           {/* 드로워 샘플 */}
           <Drawer
             title={
-              <Text fontSize="20px" fontWeight="bold">
+              <Text $fontSize="20px" $fontWeight="bold">
                 {`회원 관리 > 회원 생성`}
               </Text>
             }
@@ -230,37 +230,40 @@ const User = () => {
             open={noticeDetailOpen}
             width={`500px`}
           >
-            <Wrapper al="start" ju="start">
-              <Text fontSize="18px" fontWeight="500">
+            <Wrapper $al="start" $ju="start">
+              <Text $fontSize="18px" $fontWeight="500">
                 회원 정보 입력
               </Text>
 
-              <Text margin="20px 0 0" fontWeight="500">
+              <Text $margin="20px 0 0" $fontWeight="500">
                 닉네임
               </Text>
               <Input
                 placeholder="닉네임를 입력해 주세요."
                 readOnly
                 style={{ marginTop: "5px", width: "100%" }}
-                {...nickname}
+                value={nickname.value}
+                onChange={nickname.onChange}
               />
-              <Text margin="20px 0 0" fontWeight="500">
+              <Text $margin="20px 0 0" $fontWeight="500">
                 이름
               </Text>
               <Input
                 placeholder="이름을 입력해 주세요."
                 readOnly
                 style={{ marginTop: "5px", width: "100%" }}
-                {...name}
+                value={name.value}
+                onChange={name.onChange}
               />
-              <Text margin="20px 0 0" fontWeight="500">
+              <Text $margin="20px 0 0" $fontWeight="500">
                 성별
               </Text>
               <Input
                 placeholder="위치를 입력해 주세요."
                 readOnly
                 style={{ marginTop: "5px", width: "100%" }}
-                {...age}
+                value={age.value}
+                onChange={age.onChange}
               />
               <Button
                 type="primary"

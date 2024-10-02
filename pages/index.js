@@ -4,7 +4,7 @@ import {
   Image,
   Text,
   Wrapper,
-} from "@/components/commomComponents";
+} from "@/components/commonComponents";
 import useInput from "@/hooks/useInput";
 import wrapper from "@/store/store";
 import { Input, message } from "antd";
@@ -41,48 +41,49 @@ const Login = () => {
   }, []);
 
   return (
-    <Wrapper dr="row" height="100vh">
-      <Wrapper width="50%">
+    <Wrapper $dr="row" $height="100vh">
+      <Wrapper $width="50%">
         <Image
-          height={`100vh`}
+          $height={`100vh`}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9ZfOGmD8PA8eNW4jHUngJ-SaX5-dNgzs52g&s"
         ></Image>
       </Wrapper>
       <Wrapper
-        width="50%"
-        height="100%"
-        bgImg={
+        $width="50%"
+        $height="100%"
+        $bgImg={
           "url(https://crepe.land/portfolio/0/00/00ylo5dj24k6nmzgdauvu9ckcp4vnm5v_IMG_8249.jpeg)"
         }
       >
         <WrapperStyle
-          width="auto"
-          bgColor={Theme.white_C}
-          padding="35px 70px"
-          border={`1px solid ${Theme.basicTheme_C}`}
-          al="start"
-          radius="10px"
+          $width="auto"
+          $bgColor={Theme.white_C}
+          $padding="35px 70px"
+          $border={`1px solid ${Theme.basicTheme_C}`}
+          $al="start"
+          $radius="10px"
         >
           <Wrapper
-            fontSize="25px"
-            borderBottom={`1px solid ${Theme.basicTheme_C}`}
-            fontWeight="600"
-            height="40px"
-            color={Theme.subTheme_C}
+            $fontSize="25px"
+            $fontWeight="600"
+            $height="40px"
+            $borderBottom={`1px solid ${Theme.basicTheme_C}`}
+            $color={Theme.subTheme_C}
           >
             미소녀 채팅 관리자 사이트
           </Wrapper>
 
-          <Text margin="25px 0 5px" fontWeight="600">
+          <Text $margin="25px 0 5px" $fontWeight="600">
             관리자 아이디
           </Text>
           <Input
             placeholder="아이디 입력"
             style={{ width: "250px" }}
-            {...id}
+            value={id.value}
+            onChange={id.onChange}
             size="large"
           />
-          <Text fontWeight="600" margin="15px 0 5px">
+          <Text $fontWeight="600" $margin="15px 0 5px">
             비밀번호
           </Text>
           <Input
@@ -90,11 +91,12 @@ const Login = () => {
             type="password"
             style={{ width: "250px" }}
             size="large"
-            {...password}
+            value={password.value}
+            onChange={password.onChange}
           />
           <CommonButton
-            width="100%"
-            margin="20px 0 0"
+            $width="100%"
+            $margin="20px 0 0"
             type="primary"
             onClick={loginHandler}
             size="large"

@@ -13,11 +13,6 @@ const MyApp = ({ Component, pageProps }) => {
         <title>미소녀채팅관리자</title>
 
         <link rel="icon" href="/favicon.ico" />
-        {/* font */}
-        <link
-          href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
-          rel="stylesheet"
-        ></link>
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>
